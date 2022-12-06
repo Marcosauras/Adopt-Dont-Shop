@@ -81,4 +81,3 @@ function showAnimals(pet) {
 
 }
 
-function
