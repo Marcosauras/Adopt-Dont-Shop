@@ -3,12 +3,10 @@ let apiKey = "sbkQE4y07LmiClHOWA7HTgN4YohDfEx44m5DOUc4DVEQjbQoQU";
 let secret = "QvbeKf6Pg5ylYKSPPZEtvZp4nJL5iaxlFv49mN5w";
 let token;
 let dogCards = document.getElementById("dog-cards")
-
+let animalSearch = document.getElementById("animal-search")
 const dogForm = document.getElementById("dog-form")
 
-addEventListener('click', grabAnimals)
-
-
+addEventListener('submit', grabAnimals)
 
 function grabAnimals(e){
     e.preventDefault();
