@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-family: 'Solway', serif;
+}
+.navbar{
+    background-color: rgb(197, 196, 196);
+}
+.card{
+    margin: 15px;
+    border-radius: 5px;
+}
+body{
+    background-image: url(./assets/images/wood.jpg);
+}
