@@ -6,7 +6,10 @@ let dogCards = document.getElementById("dog-cards")
 let animalSearch = document.getElementById("animal-search")
 const dogForm = document.getElementById("dog-form")
 
+
 addEventListener('submit', grabAnimals)
+
+
 
 function grabAnimals(e){
     e.preventDefault();
@@ -46,6 +49,7 @@ function showAnimals(pet) {
 
     pet.forEach(pet => {
         const div = document.createElement("div");
+
         div.classList.add("card", "card-body", "bg-blue-300");
         div.innerHTML = `
       <div class=" display-flex">
@@ -53,6 +57,7 @@ function showAnimals(pet) {
         <img class="rounded-md" src="${
           pet.photos[0] ? pet.photos[0].medium : ""
         }">
+        
           <h4>${pet.name} (${pet.age})</h4>
           <p class="text-secondary">${pet.breeds.primary}</p>
           <p>${pet.contact.address.city}, ${pet.contact.address.state} ${
@@ -72,6 +77,7 @@ function showAnimals(pet) {
         </div>
         <div class="">
         
+
         </div>
       </div>
     `;
@@ -80,3 +86,4 @@ function showAnimals(pet) {
     });
 
 }
+
