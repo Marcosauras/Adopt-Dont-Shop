@@ -3,10 +3,12 @@ let apiKey = "sbkQE4y07LmiClHOWA7HTgN4YohDfEx44m5DOUc4DVEQjbQoQU";
 let secret = "QvbeKf6Pg5ylYKSPPZEtvZp4nJL5iaxlFv49mN5w";
 let token;
 let dogCards = document.getElementById("dog-cards")
-
+let animalSearch = document.getElementById("animal-search")
 const dogForm = document.getElementById("dog-form")
 
+
 addEventListener('submit', grabAnimals)
+
 
 
 function grabAnimals(e){
@@ -47,10 +49,15 @@ function showAnimals(pet) {
 
     pet.forEach(pet => {
         const div = document.createElement("div");
-        div.classList.add("card", "card-body");
+
+        div.classList.add("card", "card-body", "bg-blue-300");
         div.innerHTML = `
-      <div class="bg-blue-300 display-flex">
-        <div class="">
+      <div class=" display-flex">
+        <div class="pet-container p-5">
+        <img class="rounded-md" src="${
+          pet.photos[0] ? pet.photos[0].medium : ""
+        }">
+        
           <h4>${pet.name} (${pet.age})</h4>
           <p class="text-secondary">${pet.breeds.primary}</p>
           <p>${pet.contact.address.city}, ${pet.contact.address.state} ${
@@ -69,9 +76,8 @@ function showAnimals(pet) {
           </ul>
         </div>
         <div class="">
-        <img class="" src="${
-          pet.photos[0] ? pet.photos[0].medium : ""
-        }">
+        
+
         </div>
       </div>
     `;
