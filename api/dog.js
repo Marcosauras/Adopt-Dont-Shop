@@ -498,7 +498,7 @@ function showAnimals(pet) {
 
         div.classList.add("card", "card-body", "bg-blue-300");
         div.innerHTML = `
-      <div class=" display-flex">
+      <div class="display-flex">
         <div class="pet-container p-5">
         <img class="pet-image" src="${
           pet.photos[0] ? pet.photos[0].medium : ""

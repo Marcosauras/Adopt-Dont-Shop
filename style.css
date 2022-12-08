@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
 }
 .header-text{
     display: flex;
@@ -19,15 +18,12 @@
 body{
     background-image: url(./assets/images/wood.jpg);
 }
-#maps{
-    text-align: center;
+
+
+
+
+
+.pet-image{
     display: flex;
     
-
-    
-}
-
-#pet-image{
-    display: flex;
-    flex-direction: row;
 }
