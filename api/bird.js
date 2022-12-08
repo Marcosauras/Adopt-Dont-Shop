@@ -1,4 +1,3 @@
-
 let apiKey = "sbkQE4y07LmiClHOWA7HTgN4YohDfEx44m5DOUc4DVEQjbQoQU";
 let secret = "QvbeKf6Pg5ylYKSPPZEtvZp4nJL5iaxlFv49mN5w";
 let token;
@@ -30,7 +29,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 .then(() =>{
     //calls the api but this time with the token Oauth
     // TODO put user inputs into this fetch
-    fetch('https://api.petfinder.com/v2/animals?type=dog&location='+ zipCode + '&status=adoptable', {
+    fetch('https://api.petfinder.com/v2/animals?type=bird&location='+ zipCode + '&status=adoptable', {
     headers: {
         Authorization: "Bearer " + token,
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -52,9 +51,9 @@ function showAnimals(pet) {
 
         div.classList.add("card", "card-body", "bg-blue-300");
         div.innerHTML = `
-      <div class="display-flex">
+      <div class=" display-flex">
         <div class="pet-container p-5">
-        <img class="pet-image" src="${
+        <img class="rounded-md" src="${
           pet.photos[0] ? pet.photos[0].medium : ""
         }">
         
