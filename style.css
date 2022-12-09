@@ -18,12 +18,15 @@
 body{
     background-image: url(./assets/images/wood.jpg);
 }
-
-
-
-
-
-.pet-image{
+#maps{
+    text-align: center;
     display: flex;
     
+
+    
+}
+
+#pet-image{
+    display: flex;
+    flex-direction: row;
 }
