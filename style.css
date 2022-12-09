@@ -8,9 +8,6 @@
     font-size: 48px;
     font-family: 'Solway', serif;
 }
-.navbar{
-    background-color: rgb(197, 196, 196);
-}
 .card{
     margin: 15px;
     border-radius: 5px;
@@ -25,4 +22,3 @@ body{
 .map-styling{
     border: 1px black solid;
 }
-
