@@ -18,26 +18,10 @@
 body{
     background-image: url(./assets/images/wood.jpg);
 }
-<<<<<<< HEAD
-#maps{
-    text-align: center;
-    display: flex;
-    
 
-    
+#pet-image{
+    display: flex;
 }
-
-#pet-image{
-    display: flex;
-    flex-direction: row;
-=======
-
-
-
-
-
-#pet-image{
-    display: flex;
-    
->>>>>>> 6b9c5275468767c4e58c6eed41d051436f201581
+.map-styling{
+    border: 1px black solid;
 }
