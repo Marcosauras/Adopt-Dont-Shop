@@ -1,9 +1,9 @@
 let apiKey = "sbkQE4y07LmiClHOWA7HTgN4YohDfEx44m5DOUc4DVEQjbQoQU";
 let secret = "QvbeKf6Pg5ylYKSPPZEtvZp4nJL5iaxlFv49mN5w";
 let token;
-let dogCards = document.getElementById("dog-cards")
+let rabbitCards = document.getElementById("rabbit-cards")
 let animalSearch = document.getElementById("animal-search")
-const dogForm = document.getElementById("dog-form")
+const rabbitForm = document.getElementById("rabbit-form")
 
 
 addEventListener('submit', grabAnimals)
@@ -44,7 +44,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 function showAnimals(pet) {
   console.log(pet)
     // clear results first
-    dogCards.innerHTML = "";
+    rabbitCards.innerHTML = "";
 
     pet.forEach(pet => {
         const div = document.createElement("div");
@@ -96,7 +96,7 @@ function showAnimals(pet) {
         
       </div>
     `;
-        dogCards.append(div)
+        rabbitCards.append(div)
         
     });
 
