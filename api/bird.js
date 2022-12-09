@@ -74,10 +74,16 @@ function showAnimals(pet) {
             <li class="">Shelter ID: ${pet.organization_id}</li>
           </ul>
         </div>
-        <div class="">
-        
-
-        </div>
+        <iframe
+         width="600"
+         height="450"
+         style="border:0"
+         loading="lazy"
+         allowfullscreen
+         referrerpolicy="no-referrer-when-downgrade"
+         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7PriPa6496JhFyFBICpjkcjkxgyUukgM
+         &q=Space+Needle,${pet.contact.address.city}+${pet.contact.address.state}">
+        </iframe>
       </div>
     `;
         dogCards.append(div)
