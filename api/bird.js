@@ -5,15 +5,15 @@ let birdCards = document.getElementById("bird-cards")
 let animalSearch = document.getElementById("animal-search")
 const birdForm = document.getElementById("bird-form")
 
-
-addEventListener('submit', grabAnimals)
-
-
-
-function grabAnimals(e){
-    e.preventDefault();
-    let zipCode = document.querySelector("#zip-code").value.trim();
-    console.log(zipCode)
+// grabs zip code
+function grabZipCode(){
+  let zipCode = document.querySelector("#zip-code").value.trim();
+  grabAnimals(zipCode)
+}
+// collects the animals info
+function grabAnimals(usersZipCode) {
+  let zipCode = usersZipCode
+  console.log(zipCode);
 
     // grabs the access token from Pet Finders API
 fetch('https://api.petfinder.com/v2/oauth2/token', {
@@ -90,15 +90,34 @@ function showAnimals(pet) {
             </div>
           </div>
         </div>
-        
-            
-
-        
       </div>
     `;
         birdCards.append(div)
-        
     });
-
 }
 
+// listens for a submit on the webpage and will set the zipcode value for the rest of the webpage
+addEventListener("submit", (event) => {
+  let zipCodeInput = document.querySelector("#zip-code").value.trim();
+  // text.textContent = number.target.value
+  grabZipCode()
+  saveZipCode(zipCodeInput);
+});
+// stores the zipcode
+var saveZipCode = function (zipCodeInput) {
+  localStorage.setItem("zipCode", JSON.stringify(zipCodeInput));
+};
+
+var oldZipCodeSubmitHandler = function (e) {
+  var storedZipCodes = JSON.parse(localStorage.getItem("zipCode"));
+  // forces the zipcode back into a integer
+  var storedZipCodes = parseInt(storedZipCodes);
+  console.log(storedZipCodes);
+if (isNaN(storedZipCodes)){
+  return;
+} else{
+  grabAnimals(storedZipCodes)
+}
+};
+
+oldZipCodeSubmitHandler();
