@@ -14,38 +14,39 @@
         <!-- Dog, cat, bird, rabbit -->
     <div>
 
-        <div class="navbar">
+        <div class="navbar bg-stone-500">
             <h1 class="header-text">Adopt A Dog</h1>
             <div class="flex items-center justify-center">
-                <a class="btn  mb-5 rounded-l inline-block px-7 py-3 bg-indigo-600 text-white font-medium text-sm leading-snug uppercase hover:bg-purple-500 focus:bg-purple-700 focus:outline-none focus:ring-0 active:bg-purple-800 transition duration-150 ease-in-out" href="../index.html">Home</a>
-                <a class="btn mb-5  inline-block px-7 py-3 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out" href="./cat.html">Cats</a>
-                <a class="btn mb-5  inline-block px-7 py-3 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out"href="./bird.html" >birds</a>
-                <a class="btn mb-5  rounded-r inline-block px-7 py-3 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out" href="./rabbit.html">rabbits</a>
+                <a class="btn  mb-5 rounded-l inline-block px-2 py-1 sm:px-7 sm:py-4 bg-indigo-600 text-white font-medium text-sm leading-snug uppercase hover:bg-purple-500 focus:bg-purple-700 focus:outline-none focus:ring-0 active:bg-purple-800 transition duration-150 ease-in-out" href="../index.html">Home</a>
+                <a class="btn mb-5  inline-block px-2 py-1 sm:px-7 sm:py-4 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out" href="./cat.html">Cats</a>
+                <a class="btn mb-5  inline-block px-2 py-1 sm:px-7 sm:py-4 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out"href="./bird.html" >birds</a>
+                <a class="btn mb-5  rounded-r inline-block px-2 py-1 sm:px-7 sm:py-4 bg-purple-600 text-white font-medium text-sm leading-snug uppercase hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus:ring-0 active:bg-indigo-800 transition duration-150 ease-in-out" href="./rabbit.html">rabbits</a>
         </div>
     </div>  
     
             <!-- this is where you will do your search -->
         <div class="dog-criteria bg-stone-500">
             <div class="flex justify-center">
-                <div class="mb-3 xl:w-96">
-                    <form id="dog-form">
+                <div class="mb-3">
+                    <form id="dog-form flex justify-center">
                         <label></label>
-                        <input id="zip-code" type="text" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Zip Code here">
-                        <input class="" id = "submit-form" type="submit">
+                        <input id="zip-code" type="text" class="form-control relative flex-auto min-w-0 block max-w-24 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Zip Code here">
                     </form>
+                    <ul class="userLastZipCode">
+
+                    </ul>
                 </div>
               </div>
         </div>
     <div class="animal-container">
         <!-- this is where the dogs will pop up -->
         <div id="dog-container" >
-            <ul id="dog-cards">
+            <ul id="dog-cards" class="grid justify-center grid-col-1 2xl:grid-cols-2">
             </ul>
         </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="../script.js"></script>
     <script src="../api/dog.js"></script>
 
     
