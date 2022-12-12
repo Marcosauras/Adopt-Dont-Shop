@@ -51,7 +51,7 @@ function showAnimals(pet) {
 
         div.classList.add("card", "card-body", "bg-stone-300", "bg-opacity-50", "lg:max-w-4xl", "lg:flex", "justify-center");
         div.innerHTML = `
-      <div class="p-5 pet-card ">
+      <div class="p-2 pet-card ">
         <div class="pet-container block contents md:flex md:justify-start">
         <img class="pet-image mb-5 mr-5 max-h-96" src="${
           pet.photos[0] ? pet.photos[0].medium : ""
