@@ -3,7 +3,7 @@ Adopt Don't Shop is website driving the idea of adopting animals in need of a ho
 
 
 ## Access 
-To access our website  Click [here](https://ktd10.github.io/Adopt-Dont-Shop/).
+To access our website  Click [here](https://marcosauras.github.io/Adopt-Dont-Shop/).
 To view our GitHub repo Click [here](https://github.com/KTD10/Adopt-Dont-Shop).
 
 
